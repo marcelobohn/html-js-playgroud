@@ -1,0 +1,25 @@
+<script type = "text/javascript" language = "JavaScript">
+	function loadPage(href)
+	{
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", href, false);
+		xmlhttp.send();
+		return xmlhttp.responseText;
+	}
+	
+	function setValue() 
+	{
+		var text = loadPage('x.html');
+		document.getElementById("yourDiv").innerHTML = text;
+	}
+	
+	function load_home(){
+		document.getElementById("yourDiv").innerHTML='<object type="text/html" data="x.html" ></object>';
+	}	
+</script>
+
+<button onclick="load_home()">teste1</button>
+<button onclick="setValue()">teste2</button>
+<div id="yourDiv" >
+s
+</div>
